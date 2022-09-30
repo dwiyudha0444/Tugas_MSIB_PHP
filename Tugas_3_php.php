@@ -15,7 +15,7 @@
 $mahasiswa = [$m1,$m2,$m3,$m4,$m5,$m6,$m7,$m8,$m9,$m10];
 
 //Buat array judul = No, NIM, Nama, Nilai, Keterangan, Grade,Predikat (di aera looping)
- $ar_judul = ['no','nim','nilai','keterangan','grade',
+ $ar_judul = ['no','nim','nama','nilai','keterangan','grade',
 'predikat'];
 ////Buat daftar aggregate nilai gunakan aggregate function di array (TFoot) => Nilai Tertinggi, Nilai Terendah, Nilai Rata2, Jumlah Siswa
 $jumlah_mahasiswa = count($mahasiswa);
@@ -94,6 +94,7 @@ $data = [
                 <tr>
                     <td><?= $no ?></td>
                     <td><?= $mhs['nim'] ?></td>
+                    <td><?= $mhs['nama'] ?></td>
                     <td><?= $mhs['nilai'] ?></td>
                     <td><?= $keterangan ?></td>
                     <td><?= $grade ?></td>
@@ -107,7 +108,7 @@ $data = [
                 foreach ($data as $ket => $hasil) {
                 ?>
                 <tr>
-                    <th colspan="7"><?= $ket ?></th>
+                    <th colspan="6"><?= $ket ?></th>
                     <th><?= $hasil ?></th>
                 </tr>
                 <?php } ?>
