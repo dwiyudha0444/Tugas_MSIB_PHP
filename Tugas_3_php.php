@@ -17,16 +17,14 @@ $mahasiswa = [$m1,$m2,$m3,$m4,$m5,$m6,$m7,$m8,$m9,$m10];
 //Buat array judul = No, NIM, Nama, Nilai, Keterangan, Grade,Predikat (di aera looping)
  $ar_judul = ['no','nim','nilai','keterangan','grade',
 'predikat'];
-//aggregate function in array
+////Buat daftar aggregate nilai gunakan aggregate function di array (TFoot) => Nilai Tertinggi, Nilai Terendah, Nilai Rata2, Jumlah Siswa
 $jumlah_mahasiswa = count($mahasiswa);
-//$jml_kg = array_column($,'jml')
 $nilai = array_column($mahasiswa,'nilai');
 $max_nilai = max($nilai);
 $min_nilai = min($nilai);
 $total_nilai = array_sum($nilai);
 $rata2 = $total_nilai / $jumlah_mahasiswa;
 
-//Buat daftar aggregate nilai gunakan aggregate function di array (TFoot) => Nilai Tertinggi, Nilai Terendah, Nilai Rata2, Jumlah Siswa
 $data = [
     'Jumlah Mahasiswa'=>$jumlah_mahasiswa,
     'Jumlah Nilai Tertinggi'=>$max_nilai,
